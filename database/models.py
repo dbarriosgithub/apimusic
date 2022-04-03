@@ -7,3 +7,11 @@ class Song(db.Document):
     album_name = db.StringField(required=True)
     song_year = db.IntField(required=True)
     duration = db.IntField(required=True)
+    playlist_owner = db.StringField(required=True)
+
+class User(db.Document):
+    email = db.StringField(required=True,unique=True)
+    password = db.StringField(required=True)
+    start_time = db.StringField(required=True,unique=True)
+    login_state = db.IntField(required=True)
+    token = db.StringField(required=True)
