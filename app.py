@@ -13,5 +13,5 @@ app.config['MONGO_SETTINGS'] = {
 initialize_db(app)
 initialize_routes(api)
 
-# app.run()
-app.run(debug=True, port=5000)
+app.debug = True
+app.run()
