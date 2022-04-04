@@ -30,14 +30,33 @@ To install MongoEngine:
 ### Otherwise
 You can clone the enterily project in your local system,active Pipenv and run app.py file.<br><br>
 Test the next endpoints using postman or another tools:<br>
-→ http://yourdomain.com/api/songs<br>
-`Method POST -> add new song`<br>
-`Method GET  -> get all songs`<br>
-→ http://yourdomain.com/api/song/id<br>
-`Ej http://yourdomain.com/api/song/7c654443bc`<br><br>
+Api use **Bearer token for authentication**<br><br>
+
 → http://yourdomain.com/api/user<br>
 `Method POST -> create new user system`<br>
-`Method GET  -> Autenticate user and get bearer token`
+`Method GET  -> Authenticate user and get Bearer token`<br><br>
+
+→ http://yourdomain.com/api/songs<br>
+`Method GET  -> get all songs`<br>
+`Method POST -> add a new song`<br><br>
+`EJ BODY`<br>
+`{
+    "track_code" : "t1",
+    "autor_name" : "Adele",
+    "title" : "Someone like you",
+    "album_name" : "21",
+    "song_year" : 2020,
+    "duration" : 30
+}`<br>
+
+→ http://yourdomain.com/api/song/id<br>
+`Method PUT -> Update song element by ID`<br>
+`Method GET  -> Get song element by ID`<br>
+`Method DELETE  -> Delete song element by ID`<br>
+
+`Ej http://yourdomain.com/api/song/7c654443bc`<br><br>
+
+
 
 
 
