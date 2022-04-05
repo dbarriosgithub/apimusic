@@ -146,8 +146,12 @@ class SongApi(Resource):
 def getBearerToken():
     headers = request.headers
     bearer = headers.get('Authorization') # Bearer YourTokenHere
-    token = bearer.split()[1]
-    return token
+
+    if bearer:
+        token = bearer.split()[1]
+        return token
+    else:
+        return ''
 
 #------verify correct string url--------
 def isValidObjId(id):
