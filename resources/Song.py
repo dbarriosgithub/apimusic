@@ -153,7 +153,7 @@ def getBearerToken():
     else:
         return ''
 
-#------verify correct string url--------
+#------ verify correct string url --------
 def isValidObjId(id):
     if ObjectId.is_valid(id):
         return True
