@@ -7,7 +7,7 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config['MONGO_SETTINGS'] = {
-    'host' : 'mongodb://localhost:27017'
+      'host' : 'mongodb+srv://mbdbarrios:Db4rr10smongo@cluster0.9sguj.mongodb.net/dbmusic?retryWrites=true&w=majority'
 }
 
 initialize_db(app)
