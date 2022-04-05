@@ -8,12 +8,11 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config['MONGO_SETTINGS'] = {
-      'host' : os.environ['MONGODB_URI']
-      # 'host' : 'mongodb+srv://mbdbarrios:Db4rr10smongo@cluster0.9sguj.mongodb.net/dbmusic?retryWrites=true&w=majority'
+      #'host' : os.environ['MONGODB_URI']
+       'host' : 'mongodb+srv://mbdbarrios:Db4rr10smongo@cluster0.9sguj.mongodb.net/dbmusic?retryWrites=true&w=majority'
 }
 
 initialize_db(app)
 initialize_routes(api)
 
-app.debug = False
-app.run()
+app.run(debug=True, port=3000)
