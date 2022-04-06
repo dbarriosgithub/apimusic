@@ -12,7 +12,12 @@ api = Api(app)
 #        # 'host' : 'mongodb+srv://mbdbarrios:Db4rr10spc@cluster0.9sguj.mongodb.net/test?retryWrites=true&w=majority'
 # }
 
-initialize_db(app)
-initialize_routes(api)
+@app.route('/')
+def home():
+    """Render website's home page."""
+    return "server ok"
 
-app.run(debug=True, port=33507)
+if __name__ == '__main__':
+    initialize_db(app)
+    initialize_routes(api)
+    app.run(debug=True, port=33507)
