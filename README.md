@@ -39,15 +39,15 @@ Api use **Bearer token for authentication**<br><br>
 → http://yourdomain.com/api/songs<br>
 `Method GET  -> get all songs`<br>
 `Method POST -> add a new song`<br><br>
-`EJ BODY`<br>
-`{
+EJ BODY<br>
+{
     "track_code" : "t1",
     "autor_name" : "Adele",
     "title" : "Someone like you",
     "album_name" : "21",
     "song_year" : 2020,
     "duration" : 30
-}`<br>
+}<br>
 
 → http://yourdomain.com/api/song/id<br>
 `Method PUT -> Update song element by ID`<br>
@@ -55,6 +55,39 @@ Api use **Bearer token for authentication**<br><br>
 `Method DELETE  -> Delete song element by ID`<br>
 
 `Ej http://yourdomain.com/api/song/7c654443bc`<br><br>
+
+### Heroku demo
+You can test the api using the next endpoints:<br>
+
+→ https://music-api-00.herokuapp.com/api/user<br>
+`Method POST -> create new user system`<br>
+`Method GET  -> Authenticate user and get` **Bearer token**<br><br>
+
+→ https://music-api-00.herokuapp.com/api/songs<br>
+`Method GET  -> get all songs`<br>
+`Method POST -> add a new song`<br><br>
+**body structure**<br>
+{
+    "track_code" : "t1",
+    "autor_name" : "Adele",
+    "title" : "Someone like you",
+    "album_name" : "21",
+    "song_year" : 2020,
+    "duration" : 30
+}<br>
+**note:** track_code unique key<br><br>
+
+→ https://music-api-00.herokuapp.com/api/song/id<br>
+`Method PUT -> Update song element by ID`<br>
+`Method GET  -> Get song element by ID`<br>
+`Method DELETE  -> Delete song element by ID`<br>
+
+Ej `https://music-api-00.herokuapp.com/api/song/624c9e0d82c2fbc8673036c0`<br><br>
+**note:** oid = id <br>
+ "_id": {
+        "$oid": "624c9e0d82c2fbc8673036c0"
+    },
+
 
 
 
