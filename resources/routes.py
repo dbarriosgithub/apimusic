@@ -1,4 +1,4 @@
-from .song import SongsApi,SongApi
+from .Song import SongsApi,SongApi
 from .user import UserApi
 
 def initialize_routes(api):
