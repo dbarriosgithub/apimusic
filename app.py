@@ -6,6 +6,9 @@ from resources.routes import initialize_routes
 app = Flask(__name__)
 api = Api(app)
 
+initialize_db(app)
+initialize_routes(api)
+
 # app.config['MONGO_SETTINGS'] = {
 #        'db': 'test',
 #        'host' : 'mongodb://localhost:27017'
@@ -18,6 +21,4 @@ def home():
     return "server ok"
 
 if __name__ == '__main__':
-    initialize_db(app)
-    initialize_routes(api)
     app.run(debug=True, port=33507)
