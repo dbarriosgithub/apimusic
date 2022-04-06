@@ -15,4 +15,4 @@ api = Api(app)
 initialize_db(app)
 initialize_routes(api)
 
-app.run(debug=True, port=8000)
+app.run(debug=True, port=33507)
